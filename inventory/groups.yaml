@@ -1,0 +1,51 @@
+---
+switches:
+  data:
+    device_role: switch
+
+testbed:
+  data:
+    environment: testbed
+
+production:
+  data:
+    environment: production
+
+cisco_ios:
+  platform: cisco_ios
+  connection_options:
+    netmiko:
+      platform: cisco_ios
+      extras:
+        timeout: 30
+        session_timeout: 30
+        banner_timeout: 30
+        auth_timeout: 30
+        fast_cli: false
+        global_delay_factor: 2
+
+aruba_osswitch:
+  platform: aruba_osswitch
+  connection_options:
+    netmiko:
+      platform: aruba_osswitch
+      extras:
+        timeout: 30
+        session_timeout: 30
+        banner_timeout: 30
+        auth_timeout: 30
+        fast_cli: false
+        global_delay_factor: 2
+
+aruba_aoscx:
+  platform: aruba_aoscx
+  connection_options:
+    netmiko:
+      platform: aruba_aoscx
+      extras:
+        timeout: 30
+        session_timeout: 30
+        banner_timeout: 30
+        auth_timeout: 30
+        fast_cli: false
+        global_delay_factor: 2
