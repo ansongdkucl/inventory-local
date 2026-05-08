@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import argparse
+import logging
 import os
 import re
 from datetime import datetime
@@ -68,6 +69,7 @@ def netmiko_platform(platform):
 
 def setup_connection(task):
     host = task.host
+    logging.info(f"Setting up connection to {host.name} ({host.hostname})")
     username = os.getenv("username")
 
     if is_cisco(host.platform):
@@ -255,13 +257,16 @@ def fmt_age(seconds, ago=False):
 
 
 def run_show(task, command):
+    logging.info(f"Sending command to {task.host.name}: {command}")
     result = task.run(
         task=netmiko_send_command,
         command_string=command,
         enable=is_cisco(task.host.platform),
         read_timeout=60,
     )
-    return str(result.result or "")
+    output = str(result.result or "")
+    logging.debug(f"Output from {task.host.name}: {output[:500]}...")  # Log first 500 chars
+    return output
 
 
 def uptime_cmd(platform):
@@ -646,6 +651,12 @@ def main():
     )
 
     args = parser.parse_args()
+
+    logging.basicConfig(
+        filename='switch_console.log',
+        level=logging.INFO,
+        format='%(asctime)s - %(levelname)s - %(message)s'
+    )
 
     nr = InitNornir(config_file=args.config)
     target = nr.filter(filter_func=lambda h: cab_label(h) == args.target)
