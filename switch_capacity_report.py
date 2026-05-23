@@ -70,27 +70,27 @@ def netmiko_platform(platform):
 def setup_connection(task):
     host = task.host
     logging.info(f"Setting up connection to {host.name} ({host.hostname})")
-    username = os.getenv("username")
+# NEW
+    username = os.getenv("SWITCH_USERNAME")
 
     if is_cisco(host.platform):
-        password = os.getenv("password")
-        secret = os.getenv("secret") or password
+        password = os.getenv("SWITCH_PASSWORD")
+        secret = os.getenv("SWITCH_SECRET") or password
     elif is_old_aruba(host):
-        password = os.getenv("aruba_pw")
+        password = os.getenv("SWITCH_ARUBA_PW")
         secret = None
     else:
-        password = os.getenv("passwordAD")
+        password = os.getenv("SWITCH_PASSWORD_AD")
         secret = None
 
     if not username:
-        raise RuntimeError("Missing environment variable: username")
+        raise RuntimeError("Missing environment variable: SWITCH_USERNAME")
 
     if not password:
         raise RuntimeError(
             f"{host.name}: missing password. "
-            "Cisco uses password, Aruba CX uses passwordAD, old Aruba uses aruba_pw."
+            "Cisco uses SWITCH_PASSWORD, Aruba CX uses SWITCH_PASSWORD_AD, old Aruba uses SWITCH_ARUBA_PW."
         )
-
     extras = {
         "conn_timeout": 30,
         "auth_timeout": 30,
