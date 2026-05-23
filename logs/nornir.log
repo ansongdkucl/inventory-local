@@ -1,0 +1,637 @@
+2026-05-22 14:29:13,699 -  nornir.core -     INFO -        run() - Running task 'collect_switch_capacity' with args {'requested_age': 2419200, 'include_admin_down': False, 'include_trunks': False} on 1 hosts
+2026-05-22 14:29:16,784 - nornir.core.task -    ERROR -      start() - Host 'ce3650-17-40-63': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1139, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/paramiko/client.py", line 409, in connect
+    raise NoValidConnectionsError(errors)
+paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 172.17.40.63
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 401, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 490, in __init__
+    self._open()
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 495, in _open
+    self.establish_connection()
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1161, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.17.40.63:22
+
+
+
+2026-05-22 14:29:19,845 - nornir.core.task -    ERROR -      start() - Host 'ce3650-17-40-63': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1139, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/paramiko/client.py", line 409, in connect
+    raise NoValidConnectionsError(errors)
+paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 172.17.40.63
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 401, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 490, in __init__
+    self._open()
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 495, in _open
+    self.establish_connection()
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1161, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.17.40.63:22
+
+
+
+2026-05-22 14:29:22,917 - nornir.core.task -    ERROR -      start() - Host 'ce3650-17-40-63': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1139, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/paramiko/client.py", line 409, in connect
+    raise NoValidConnectionsError(errors)
+paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 172.17.40.63
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 401, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 490, in __init__
+    self._open()
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 495, in _open
+    self.establish_connection()
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1161, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.17.40.63:22
+
+
+
+2026-05-22 14:30:53,933 -  nornir.core -     INFO -        run() - Running task 'collect_switch_capacity' with args {'requested_age': 2419200, 'include_admin_down': False, 'include_trunks': False} on 3 hosts
+2026-05-22 14:30:57,026 - nornir.core.task -    ERROR -      start() - Host 'ce3650-17-8-67': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1139, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/paramiko/client.py", line 409, in connect
+    raise NoValidConnectionsError(errors)
+paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 172.17.8.67
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 401, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 490, in __init__
+    self._open()
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 495, in _open
+    self.establish_connection()
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1161, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.17.8.67:22
+
+
+
+2026-05-22 14:30:57,027 - nornir.core.task -    ERROR -      start() - Host 'ce3650-17-8-66': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1139, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/paramiko/client.py", line 409, in connect
+    raise NoValidConnectionsError(errors)
+paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 172.17.8.66
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 401, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 490, in __init__
+    self._open()
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 495, in _open
+    self.establish_connection()
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1161, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.17.8.66:22
+
+
+
+2026-05-22 14:30:57,027 - nornir.core.task -    ERROR -      start() - Host 'ce3650-17-8-65': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1139, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/paramiko/client.py", line 409, in connect
+    raise NoValidConnectionsError(errors)
+paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 172.17.8.65
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 401, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 490, in __init__
+    self._open()
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 495, in _open
+    self.establish_connection()
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1161, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.17.8.65:22
+
+
+
+2026-05-22 14:31:00,105 - nornir.core.task -    ERROR -      start() - Host 'ce3650-17-8-65': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1139, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/paramiko/client.py", line 409, in connect
+    raise NoValidConnectionsError(errors)
+paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 172.17.8.65
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 401, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 490, in __init__
+    self._open()
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 495, in _open
+    self.establish_connection()
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1161, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.17.8.65:22
+
+
+
+2026-05-22 14:31:00,106 - nornir.core.task -    ERROR -      start() - Host 'ce3650-17-8-66': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1139, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/paramiko/client.py", line 409, in connect
+    raise NoValidConnectionsError(errors)
+paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 172.17.8.66
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 401, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 490, in __init__
+    self._open()
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 495, in _open
+    self.establish_connection()
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1161, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.17.8.66:22
+
+
+
+2026-05-22 14:31:00,111 - nornir.core.task -    ERROR -      start() - Host 'ce3650-17-8-67': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1139, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/paramiko/client.py", line 409, in connect
+    raise NoValidConnectionsError(errors)
+paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 172.17.8.67
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 401, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 490, in __init__
+    self._open()
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 495, in _open
+    self.establish_connection()
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1161, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.17.8.67:22
+
+
+
+2026-05-22 14:31:03,177 - nornir.core.task -    ERROR -      start() - Host 'ce3650-17-8-66': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1139, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/paramiko/client.py", line 409, in connect
+    raise NoValidConnectionsError(errors)
+paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 172.17.8.66
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 401, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 490, in __init__
+    self._open()
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 495, in _open
+    self.establish_connection()
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1161, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.17.8.66:22
+
+
+
+2026-05-22 14:31:03,179 - nornir.core.task -    ERROR -      start() - Host 'ce3650-17-8-67': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1139, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/paramiko/client.py", line 409, in connect
+    raise NoValidConnectionsError(errors)
+paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 172.17.8.67
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 401, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 490, in __init__
+    self._open()
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 495, in _open
+    self.establish_connection()
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1161, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.17.8.67:22
+
+
+
+2026-05-22 14:31:03,181 - nornir.core.task -    ERROR -      start() - Host 'ce3650-17-8-65': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1139, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/paramiko/client.py", line 409, in connect
+    raise NoValidConnectionsError(errors)
+paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 172.17.8.65
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 401, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 490, in __init__
+    self._open()
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 495, in _open
+    self.establish_connection()
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1161, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.17.8.65:22
+
+
+
+2026-05-22 14:33:07,466 -  nornir.core -     INFO -        run() - Running task 'collect_switch_capacity' with args {'requested_age': 2419200, 'include_admin_down': False, 'include_trunks': False} on 3 hosts
+2026-05-22 14:50:18,824 -  nornir.core -     INFO -        run() - Running task 'collect_switch_capacity' with args {'requested_age': 4838400, 'include_admin_down': False, 'include_trunks': False} on 3 hosts
+2026-05-22 15:02:16,155 -  nornir.core -     INFO -        run() - Running task 'collect_switch_capacity' with args {'requested_age': 4838400, 'include_admin_down': False, 'include_trunks': False} on 4 hosts
+2026-05-22 15:04:39,644 -  nornir.core -     INFO -        run() - Running task 'collect_switch_capacity' with args {'requested_age': 4838400, 'include_admin_down': False, 'include_trunks': False} on 4 hosts
+2026-05-22 15:07:40,552 -  nornir.core -     INFO -        run() - Running task 'collect_switch_capacity' with args {'requested_age': 4838400, 'include_admin_down': False, 'include_trunks': False} on 4 hosts
+2026-05-22 20:21:01,716 -  nornir.core -     INFO -        run() - Running task 'collect_switch_capacity' with args {'requested_age': 2419200, 'include_admin_down': False, 'include_trunks': False} on 2 hosts
+2026-05-23 07:03:43,168 -  nornir.core -     INFO -        run() - Running task 'collect_switch_capacity' with args {'requested_age': 2419200, 'include_admin_down': False, 'include_trunks': False} on 2 hosts
+2026-05-23 08:53:46,285 -  nornir.core -     INFO -        run() - Running task 'collect_switch_capacity' with args {'requested_age': 2419200, 'include_admin_down': False, 'include_trunks': False} on 8 hosts
+2026-05-23 08:53:46,913 - nornir.core.task -    ERROR -      start() - Host 'ae6300-dev-22-29-202': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1139, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/paramiko/client.py", line 485, in connect
+    self._auth(
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/paramiko/client.py", line 818, in _auth
+    raise saved_exception
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/paramiko/client.py", line 805, in _auth
+    self._transport.auth_password(username, password)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/paramiko/transport.py", line 1638, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/paramiko/auth_handler.py", line 263, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 401, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 490, in __init__
+    self._open()
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 495, in _open
+    self.establish_connection()
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1176, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.exceptions.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 172.22.29.202:22
+
+
+Authentication failed.
+
+2026-05-23 08:53:47,265 - nornir.core.task -    ERROR -      start() - Host 'ae6300-dev-22-29-202': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1139, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/paramiko/client.py", line 485, in connect
+    self._auth(
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/paramiko/client.py", line 818, in _auth
+    raise saved_exception
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/paramiko/client.py", line 805, in _auth
+    self._transport.auth_password(username, password)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/paramiko/transport.py", line 1638, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/paramiko/auth_handler.py", line 263, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 401, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 490, in __init__
+    self._open()
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 495, in _open
+    self.establish_connection()
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1176, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.exceptions.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 172.22.29.202:22
+
+
+Authentication failed.
+
+2026-05-23 08:53:47,620 - nornir.core.task -    ERROR -      start() - Host 'ae6300-dev-22-29-202': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1139, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/paramiko/client.py", line 485, in connect
+    self._auth(
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/paramiko/client.py", line 818, in _auth
+    raise saved_exception
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/paramiko/client.py", line 805, in _auth
+    self._transport.auth_password(username, password)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/paramiko/transport.py", line 1638, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/paramiko/auth_handler.py", line 263, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 401, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 490, in __init__
+    self._open()
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 495, in _open
+    self.establish_connection()
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1176, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.exceptions.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 172.22.29.202:22
+
+
+Authentication failed.
+
