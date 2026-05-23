@@ -6,6 +6,8 @@ requests
 openpyxl
 python-dotenv
 netmiko
+nornir
+nornir-netmiko
 ntc-templates
 paramiko
 pynacl
@@ -14,4 +16,3 @@ PyYAML
 ruamel.yaml
 scp
 textfsm
- 
