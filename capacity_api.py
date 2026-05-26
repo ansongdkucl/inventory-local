@@ -104,7 +104,7 @@ def input_card():
     }
 
 
-def read_report_rows(xlsx_path, max_preview=10):
+def read_report_rows(xlsx_path, max_preview=40):
     preview = []
     total = 0
 
@@ -184,69 +184,199 @@ def send_email_with_attachment(to_addr, subject, body, attachment_path):
 def result_card(building, cab, weeks, total, preview_rows, email_status, warnings=None):
     warnings = warnings or []
 
+    if total == 0:
+        status_icon = "⚠️"
+        status_text = "No free ports found"
+        total_color = "Attention"
+    elif total <= 5:
+        status_icon = "⚠️"
+        status_text = "Low spare capacity"
+        total_color = "Warning"
+    else:
+        status_icon = "✅"
+        status_text = "Free ports available"
+        total_color = "Good"
+
+    generated_time = datetime.now().strftime("%d %b %Y %H:%M")
+
     body = [
         {
             "type": "TextBlock",
-            "text": f"Switch Capacity Report — Building {building} Cab {cab}",
+            "text": f"{status_icon} Switch Capacity Report",
             "weight": "Bolder",
-            "size": "Medium",
+            "size": "Large",
             "wrap": True,
         },
         {
+            "type": "TextBlock",
+            "text": f"Building {building} | Cab {cab}",
+            "isSubtle": True,
+            "spacing": "None",
+            "wrap": True,
+        },
+        {
+            "type": "Container",
+            "style": "emphasis",
+            "spacing": "Medium",
+            "items": [
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "width": "stretch",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Total free ports",
+                                    "isSubtle": True,
+                                    "wrap": True,
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": str(total),
+                                    "size": "ExtraLarge",
+                                    "weight": "Bolder",
+                                    "color": total_color,
+                                    "spacing": "None",
+                                    "wrap": True,
+                                },
+                            ],
+                        },
+                        {
+                            "type": "Column",
+                            "width": "stretch",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Status",
+                                    "isSubtle": True,
+                                    "wrap": True,
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": status_text,
+                                    "weight": "Bolder",
+                                    "color": total_color,
+                                    "spacing": "None",
+                                    "wrap": True,
+                                },
+                            ],
+                        },
+                    ],
+                }
+            ],
+        },
+        {
             "type": "FactSet",
+            "spacing": "Medium",
             "facts": [
                 {"title": "Building", "value": str(building)},
                 {"title": "Cab", "value": str(cab)},
-                {"title": "Requested unused period", "value": f"{weeks} week(s)"},
-                {"title": "Total free ports", "value": str(total)},
-                {"title": "Email status", "value": email_status},
-                {"title": "Generated", "value": datetime.now().strftime("%Y-%m-%d %H:%M:%S")},
+                {"title": "Unused period", "value": f"{weeks} week(s)"},
+                {"title": "Email status", "value": str(email_status)},
+                {"title": "Generated", "value": generated_time},
             ],
         },
     ]
 
     if preview_rows:
-        lines = []
-        for r in preview_rows:
-            lines.append(
-                f"{r['hostname']} | {r['port']} | VLAN {r['vlan']} | "
-                f"{r['last_used']} | uptime {r['uptime']}"
-            )
+        grouped = {}
 
-        body.extend(
-            [
-                {
-                    "type": "TextBlock",
-                    "text": "Top results",
-                    "weight": "Bolder",
-                    "spacing": "Medium",
-                    "wrap": True,
-                },
-                {
-                    "type": "TextBlock",
-                    "text": "\n".join(lines),
-                    "fontType": "Monospace",
-                    "wrap": True,
-                },
-            ]
+        for r in preview_rows:
+            switch_name = str(r.get("hostname") or "Unknown switch").strip()
+            grouped.setdefault(switch_name, []).append(r)
+
+        body.append(
+            {
+                "type": "TextBlock",
+                "text": "Free ports by switch",
+                "weight": "Bolder",
+                "spacing": "Medium",
+                "wrap": True,
+            }
         )
 
+        for switch_name, rows in grouped.items():
+            port_lines = []
+
+            for r in rows:
+                port = str(r.get("port") or "").strip()
+                vlan = str(r.get("vlan") or "").strip()
+                outlet = str(r.get("outlet") or "").strip()
+                last_used = str(r.get("last_used") or "").strip()
+                uptime = str(r.get("uptime") or "").strip()
+
+                line_parts = [
+                    f"{port}",
+                    f"VLAN {vlan}" if vlan else "VLAN unknown",
+                ]
+
+                if outlet:
+                    line_parts.append(f"Outlet {outlet}")
+
+                if last_used:
+                    line_parts.append(f"Last used {last_used}")
+
+                if uptime:
+                    line_parts.append(f"Uptime {uptime}")
+
+                port_lines.append(" | ".join(line_parts))
+
+            body.append(
+                {
+                    "type": "Container",
+                    "separator": True,
+                    "spacing": "Medium",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": f"Switch: {switch_name}",
+                            "weight": "Bolder",
+                            "wrap": True,
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "\n".join(port_lines),
+                            "fontType": "Monospace",
+                            "wrap": True,
+                            "spacing": "Small",
+                        },
+                    ],
+                }
+            )
+
+        if total > len(preview_rows):
+            body.append(
+                {
+                    "type": "TextBlock",
+                    "text": f"Showing first {len(preview_rows)} free port(s). Full report is available in the Excel email attachment.",
+                    "isSubtle": True,
+                    "wrap": True,
+                    "spacing": "Medium",
+                }
+            )
+
     if warnings:
-        body.extend(
-            [
-                {
-                    "type": "TextBlock",
-                    "text": "Warnings",
-                    "weight": "Bolder",
-                    "color": "Warning",
-                    "wrap": True,
-                },
-                {
-                    "type": "TextBlock",
-                    "text": "\n".join(warnings[:5]),
-                    "wrap": True,
-                },
-            ]
+        body.append(
+            {
+                "type": "Container",
+                "style": "attention",
+                "spacing": "Medium",
+                "items": [
+                    {
+                        "type": "TextBlock",
+                        "text": "Warnings",
+                        "weight": "Bolder",
+                        "wrap": True,
+                    },
+                    {
+                        "type": "TextBlock",
+                        "text": "\n".join(str(w) for w in warnings[:5]),
+                        "wrap": True,
+                    },
+                ],
+            }
         )
 
     return {
@@ -255,7 +385,6 @@ def result_card(building, cab, weeks, total, preview_rows, email_status, warning
         "version": "1.2",
         "body": body,
     }
-
 
 # ── Teams webhook ───────────────────────────────────────────────────────────
 
