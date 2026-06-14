@@ -402,6 +402,17 @@ def outlet_from_description(description):
 
 
 def last_used_from_detail(output):
+    m = re.search(
+        r"Last\s+input\s+([^,\r\n]+),\s*output\s+([^,\r\n]+)",
+        output,
+        re.I,
+    )
+    if m:
+        ages = [parse_age(value) for value in m.groups()]
+        known_ages = [age for age in ages if age is not None]
+        if known_ages:
+            return min(known_ages)
+
     patterns = [
         r"Last\s+link\s+flapped\s+([^\r\n]+)",
         r"Last\s+link\s+state\s+change\s*[:=]?\s*([^\r\n]+)",
