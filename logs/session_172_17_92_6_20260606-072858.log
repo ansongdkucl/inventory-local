@@ -1,0 +1,81 @@
+
+
+terminal width 511
+terminal length 0
+Cisco Nexus Operating System (NX-OS) Software
+TAC support: http://www.cisco.com/tac
+Copyright (C) 2002-2023, Cisco and/or its affiliates.
+All rights reserved.
+The copyrights to certain works contained in this software are
+owned by other third parties and used and distributed under their own
+licenses, such as open source.  This software is provided "as is," and unless
+otherwise stated, there is no warranty, express or implied, including but not
+limited to warranties of merchantability and fitness for a particular purpose.
+Certain components of this software are licensed under
+the GNU General Public License (GPL) version 2.0 or 
+GNU General Public License (GPL) version 3.0  or the GNU
+Lesser General Public License (LGPL) Version 2.1 or 
+Lesser General Public License (LGPL) Version 2.0. 
+A copy of each such license is available at
+http://www.opensource.org/licenses/gpl-2.0.php and
+http://opensource.org/licenses/gpl-3.0.html and
+http://www.opensource.org/licenses/lgpl-2.1.php and
+http://www.gnu.org/licenses/old-licenses/library.txt.
+
+nx93180-17-92-6# 
+
+nx93180-17-92-6# terminal width 511
+
+nx93180-17-92-6# terminal length 0
+
+nx93180-17-92-6# 
+
+nx93180-17-92-6# 
+
+nx93180-17-92-6# 
+
+nx93180-17-92-6# show snmp location
+                           ^
+% Invalid command at '^' marker.
+
+nx93180-17-92-6# 
+
+nx93180-17-92-6# show inventory
+NAME: "Chassis",  DESCR: "Nexus9000 C93180YC-EX chassis"         
+PID: N9K-C93180YC-EX     ,  VID: V05 ,  SN: FDO25470EMD          
+
+NAME: "Slot 1",  DESCR: "48x10/25G + 6x40/100G Ethernet Module" 
+PID: N9K-C93180YC-EX     ,  VID: V05 ,  SN: FDO25470EMD          
+
+NAME: "Power Supply 1",  DESCR: "Nexus9000 C93180YC-EX chassis Power Supply"
+PID: NXA-PAC-650W-PE     ,  VID: V04 ,  SN: DCC252940WB          
+
+NAME: "Power Supply 2",  DESCR: "Nexus9000 C93180YC-EX chassis Power Supply"
+PID: NXA-PAC-650W-PE     ,  VID: V04 ,  SN: DCC252940VV          
+
+NAME: "Fan 1",  DESCR: "Nexus9000 C93180YC-EX chassis Fan Module"
+PID: NXA-FAN-30CFM-F     ,  VID: V01 ,  SN: N/A                  
+
+NAME: "Fan 2",  DESCR: "Nexus9000 C93180YC-EX chassis Fan Module"
+PID: NXA-FAN-30CFM-F     ,  VID: V01 ,  SN: N/A                  
+
+NAME: "Fan 3",  DESCR: "Nexus9000 C93180YC-EX chassis Fan Module"
+PID: NXA-FAN-30CFM-F     ,  VID: V01 ,  SN: N/A                  
+
+NAME: "Fan 4",  DESCR: "Nexus9000 C93180YC-EX chassis Fan Module"
+PID: NXA-FAN-30CFM-F     ,  VID: V01 ,  SN: N/A                  
+
+
+nx93180-17-92-6# 
+
+nx93180-17-92-6# show interfaces status
+                               ^
+% Invalid command at '^' marker.
+
+nx93180-17-92-6# show switch
+                       ^
+% Ambiguous command at '^' marker.
+
+nx93180-17-92-6# 
+
+nx93180-17-92-6# exit

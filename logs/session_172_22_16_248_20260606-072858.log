@@ -1,0 +1,33 @@
+
+ae6300M-22-16-248# 
+ae6300M-22-16-248# 
+ae6300M-22-16-248# no page
+ae6300M-22-16-248# 
+ae6300M-22-16-248# show snmp system
+SNMP system information
+----------------------------
+System description : FL.10.13.1020
+System location : Wilkins Building, (Haldane Room G18), AV Cab 5/23
+ae6300M-22-16-248# show system | inc Product
+Product Name           : S0E91A 6300M 48SR10 CL8 PoE 4p100G Sw
+ae6300M-22-16-248# show interfaces brief
+Invalid input: interfaces
+ae6300M-22-16-248# show vsf
+
+Force Autojoin             : Disabled
+Autojoin Eligibility Status: Not Eligible
+MAC Address                : 7c:a8:ec:0d:37:40
+Egress Shape Rate          : None
+Secondary                  :   
+Topology                   : Ring
+Status                     : No Split
+Split Detection Method     : None
+
+
+Mbr Mac Address         type           Status   
+ID
+--- ------------------- -------------- ---------------
+1   7c:a8:ec:0d:37:40   S0E91A         Conductor
+2   7c:a8:ec:0d:f7:00   S0E91A         Member
+ae6300M-22-16-248# 
+ae6300M-22-16-248# exit

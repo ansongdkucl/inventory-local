@@ -74,7 +74,8 @@ ONEDRIVE_EXCEL_FILE = Path(
     "ISD.ITSD.CO.Technical Specialists - configs/inventory.xlsx"
 )
 
-SHEET_NAME = "Sheet1"
+SHEET_NAME = "inventory"
+LEGACY_SHEET_NAME = "Sheet1"
 
 IP_COLUMN = "IP Address"
 HOSTNAME_COLUMN = "hostname"
@@ -105,7 +106,15 @@ logging.getLogger().addHandler(console)
 
 logging.info("=== Script started ===")
 
-RED_FILL = PatternFill(start_color="FF0000", end_color="FF0000", fill_type="solid")
+LIGHT_RED_COLOR = "FFFFC7CE"
+LEGACY_RED_COLOR = "FFFF0000"
+
+LIGHT_RED_FILL = PatternFill(
+    start_color=LIGHT_RED_COLOR,
+    end_color=LIGHT_RED_COLOR,
+    fill_type="solid",
+)
+NO_FILL = PatternFill(fill_type=None)
 
 # ============================================================
 # ENV CHECK
@@ -207,7 +216,15 @@ def copy_result_back_to_onedrive():
 def load_excel():
     prepare_local_excel_file()
     wb = load_workbook(LOCAL_EXCEL_FILE)
-    ws = wb[SHEET_NAME]
+    if SHEET_NAME in wb.sheetnames:
+        ws = wb[SHEET_NAME]
+    elif LEGACY_SHEET_NAME in wb.sheetnames:
+        ws = wb[LEGACY_SHEET_NAME]
+    else:
+        raise RuntimeError(
+            f"Inventory workbook must contain '{SHEET_NAME}' worksheet "
+            f"or legacy '{LEGACY_SHEET_NAME}' worksheet."
+        )
     return wb, ws
 
 
@@ -225,7 +242,47 @@ def update_cell(ws, row, col, value):
 
 
 def highlight_cell(ws, row, col):
-    ws.cell(row=row, column=col).fill = RED_FILL
+    ws.cell(row=row, column=col).fill = LIGHT_RED_FILL
+
+
+def clear_cell_fill(ws, row, col):
+    ws.cell(row=row, column=col).fill = NO_FILL
+
+
+def cell_has_ping_fail_fill(cell):
+    if cell.fill.fill_type != "solid":
+        return False
+
+    color = cell.fill.fgColor.rgb or cell.fill.start_color.rgb
+    return color in {LIGHT_RED_COLOR, LEGACY_RED_COLOR}
+
+
+def clear_reachable_ping_fail_fills(ws, ip_col, timeout):
+    cleared_count = 0
+
+    for row_num in range(2, ws.max_row + 1):
+        ip_cell = ws.cell(row=row_num, column=ip_col)
+
+        if not cell_has_ping_fail_fill(ip_cell):
+            continue
+
+        ip = ip_cell.value
+
+        if not ip:
+            continue
+
+        ip = str(ip).strip()
+
+        if not ip:
+            continue
+
+        if ping_host(ip, timeout):
+            clear_cell_fill(ws, row_num, ip_col)
+            cleared_count += 1
+            logging.info(f"[ROW {row_num}] {ip} | PREVIOUS PING FAIL CLEARED")
+
+    if cleared_count:
+        logging.info(f"[PING CLEANUP] cleared_reachable_previous_failures={cleared_count}")
 
 
 def clean_console_value(value):
@@ -768,6 +825,11 @@ def main():
     if missing:
         raise RuntimeError(f"Missing columns in Excel file: {missing}")
 
+    ip_col = cols[IP_COLUMN]
+
+    if args.ping_only:
+        clear_reachable_ping_fail_fills(ws, ip_col, args.ping_timeout)
+
     ping_failures = []
 
     processed_count = 0
@@ -777,7 +839,8 @@ def main():
     ping_fail_count = 0
 
     for row_num in range(args.start_row, ws.max_row + 1):
-        ip = ws.cell(row=row_num, column=cols[IP_COLUMN]).value
+        ip_cell = ws.cell(row=row_num, column=ip_col)
+        ip = ip_cell.value
 
         if not ip:
             continue
@@ -797,6 +860,9 @@ def main():
             if ping_success:
                 ping_ok_count += 1
 
+                if cell_has_ping_fail_fill(ip_cell):
+                    clear_cell_fill(ws, row_num, ip_col)
+
                 log_row_result(
                     row_num=row_num,
                     ip=ip,
@@ -805,7 +871,7 @@ def main():
             else:
                 ping_fail_count += 1
                 ping_failures.append(ip)
-                highlight_cell(ws, row_num, cols[IP_COLUMN])
+                highlight_cell(ws, row_num, ip_col)
 
                 log_row_result(
                     row_num=row_num,
@@ -820,7 +886,7 @@ def main():
 
         if not data:
             fail_count += 1
-            highlight_cell(ws, row_num, cols[IP_COLUMN])
+            highlight_cell(ws, row_num, ip_col)
 
             log_row_result(
                 row_num=row_num,

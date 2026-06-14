@@ -1,0 +1,32 @@
+
+ae6300m-22-27-60# 
+ae6300m-22-27-60# 
+ae6300m-22-27-60# no page
+ae6300m-22-27-60# 
+ae6300m-22-27-60# show snmp system
+SNMP system information
+----------------------------
+System description : FL.10.13.1040
+System location : Senit Suite, South Wing
+ae6300m-22-27-60# show system | inc Product
+Product Name           : S0E91A 6300M 48SR10 CL8 PoE 4p100G Sw
+ae6300m-22-27-60# show interfaces brief
+Invalid input: interfaces
+ae6300m-22-27-60# show vsf
+
+Force Autojoin             : Disabled
+Autojoin Eligibility Status: Not Eligible
+MAC Address                : 00:c8:4e:1e:31:80
+Egress Shape Rate          : None
+Secondary                  :   
+Topology                   : Standalone
+Status                     : No Split
+Split Detection Method     : None
+
+
+Mbr Mac Address         type           Status   
+ID
+--- ------------------- -------------- ---------------
+1   00:c8:4e:1e:31:80   S0E91A         Conductor
+ae6300m-22-27-60# 
+ae6300m-22-27-60# exit

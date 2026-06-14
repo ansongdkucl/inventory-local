@@ -1,0 +1,21 @@
+
+
+Last login: 2026-05-10 21:32:29 from 128.40.19.111
+User "cceadan" has logged in 4 times in the past 30 days
+ae4100i-22-22-15# 
+ae4100i-22-22-15# 
+ae4100i-22-22-15# no page
+ae4100i-22-22-15# 
+ae4100i-22-22-15# show snmp system
+SNMP system information
+----------------------------
+System description : RL.10.10.1070
+System location : 304 Seminar AV Switch Maple House 3/B
+ae4100i-22-22-15# show system | inc Product
+Product Name       : JL818A 4100i 24G CL4/6 POE 4SFP+ Sw  
+ae4100i-22-22-15# show interfaces brief
+Invalid input: interfaces
+ae4100i-22-22-15# show vsf
+Invalid input: vsf
+ae4100i-22-22-15# 
+ae4100i-22-22-15# exit

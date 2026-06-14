@@ -1,0 +1,65 @@
+C
+
+
+                 Catalyst 2960 --  School of Pharmacy
+
+                 Authorised access only !!!
+
+
+
+ce2960-17-126-120>
+ce2960-17-126-120>terminal width 511
+ce2960-17-126-120>terminal length 0
+ce2960-17-126-120>
+ce2960-17-126-120>
+ce2960-17-126-120>enable
+Password: 
+ce2960-17-126-120#
+ce2960-17-126-120#
+ce2960-17-126-120#show snmp location
+5th Floor, 1-ES1, School of Pharmacy
+ce2960-17-126-120#
+ce2960-17-126-120#show inventory
+NAME: "1", DESCR: "WS-C2960-24PC-L"
+PID: WS-C2960-24PC-L   , VID: V02  , SN: FOC1409Z37T
+
+NAME: "GigabitEthernet0/1", DESCR: "1000BaseSX SFP"
+PID:                     , VID:      , SN: AGM120519DL     
+
+
+ce2960-17-126-120#
+ce2960-17-126-120#show interfaces status
+
+Port      Name               Status       Vlan       Duplex  Speed Type
+Fa0/1     Vacant             notconnect   328          auto   auto 10/100BaseTX
+Fa0/2     Lab PC             notconnect   328          auto   auto 10/100BaseTX
+Fa0/3     Vacant             notconnect   328          auto   auto 10/100BaseTX
+Fa0/4     Vacant             notconnect   328          auto   auto 10/100BaseTX
+Fa0/5     Vacant             notconnect   328          auto   auto 10/100BaseTX
+Fa0/6     Vacant             notconnect   328          auto   auto 10/100BaseTX
+Fa0/7     Vacant             notconnect   328          auto   auto 10/100BaseTX
+Fa0/8     Vacant             notconnect   328          auto   auto 10/100BaseTX
+Fa0/9     Vacant             notconnect   328          auto   auto 10/100BaseTX
+Fa0/10    Lab PC             notconnect   124          auto   auto 10/100BaseTX
+Fa0/11    Vacant             notconnect   328          auto   auto 10/100BaseTX
+Fa0/12    Vacant             notconnect   328          auto   auto 10/100BaseTX
+Fa0/13    Vacant             notconnect   328          auto   auto 10/100BaseTX
+Fa0/14    Vacant             notconnect   328          auto   auto 10/100BaseTX
+Fa0/15    Vacant             notconnect   328          auto   auto 10/100BaseTX
+Fa0/16    Vacant             notconnect   328          auto   auto 10/100BaseTX
+Fa0/17    Vacant             notconnect   328          auto   auto 10/100BaseTX
+Fa0/18    Vacant             notconnect   328          auto   auto 10/100BaseTX
+Fa0/19    Vacant             notconnect   328          auto   auto 10/100BaseTX
+Fa0/20    Vacant             notconnect   328          auto   auto 10/100BaseTX
+Fa0/21    Vacant             notconnect   328          auto   auto 10/100BaseTX
+Fa0/22    Vacant             notconnect   328          auto   auto 10/100BaseTX
+Fa0/23    Vacant             notconnect   328          auto   auto 10/100BaseTX
+Fa0/24    525 WiFi AP503     connected    990        a-full  a-100 10/100BaseTX
+Gi0/1                        connected    trunk      a-full a-1000 1000BaseSX SFP
+Gi0/2                        notconnect   1            auto   auto Not Present
+ce2960-17-126-120#show switch
+                        ^
+% Invalid input detected at '^' marker.
+
+ce2960-17-126-120#
+ce2960-17-126-120#exit

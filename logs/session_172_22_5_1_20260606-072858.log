@@ -1,0 +1,34 @@
+
+Last login: 2026-06-05 21:48:59 from 128.40.19.73
+User "cceadan" has logged in 1 time in the past 30 days
+ae6300M-22-5-1# 
+ae6300M-22-5-1# 
+ae6300M-22-5-1# no page
+ae6300M-22-5-1# 
+ae6300M-22-5-1# show snmp system
+SNMP system information
+----------------------------
+System description : FL.10.13.1040
+ae6300M-22-5-1# show system | inc Product
+Product Name           : S0E91A 6300M 48SR10 CL8 PoE 4p100G Sw
+ae6300M-22-5-1# show interfaces brief
+Invalid input: interfaces
+ae6300M-22-5-1# show vsf
+
+Force Autojoin             : Disabled
+Autojoin Eligibility Status: Not Eligible
+MAC Address                : 14:7e:19:a6:7c:c0
+Egress Shape Rate          : None
+Secondary                  : 2
+Topology                   : Ring
+Status                     : No Split
+Split Detection Method     : None
+
+
+Mbr Mac Address         type           Status   
+ID
+--- ------------------- -------------- ---------------
+1   14:7e:19:a6:7c:c0   S0E91A         Conductor
+2   14:7e:19:a6:0b:c0   S0E91A         Standby
+ae6300M-22-5-1# 
+ae6300M-22-5-1# exit

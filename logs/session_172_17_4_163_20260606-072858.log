@@ -1,0 +1,67 @@
+
+
+       *************************************************************
+       *         This is a UCL AV c1000 series  switch             *
+       *                                                           *
+       *  - WARNING: Authorised access ONLY! Disconnect now if     *
+       *    not authorised!                                        *
+       *                                                           *
+       *  - This system is managed by:                             *
+       *                                                           *
+       *    Network Operations Dept., Information Systems          *
+       *    Division, University College London.                   *
+       *                                                           *
+       *    Telephone Number: (020)7-6797-350                      *
+       *    Email: nwg-ops@ucl.ac.uk                               *
+       *                                                           *
+       *************************************************************
+ce1000-17-4-163>
+ce1000-17-4-163>terminal width 511
+ce1000-17-4-163>terminal length 0
+ce1000-17-4-163>
+ce1000-17-4-163>
+ce1000-17-4-163>enable
+Password: 
+ce1000-17-4-163#
+ce1000-17-4-163#
+ce1000-17-4-163#show snmp location
+Chandler House B02 
+ce1000-17-4-163#
+ce1000-17-4-163#show inventory
+NAME: "1", DESCR: "C1000-16FP-2G-L"
+PID: C1000-16FP-2G-L   , VID: V02  , SN: FOC2717YM5S
+
+
+ce1000-17-4-163#
+ce1000-17-4-163#show interfaces status
+
+Port      Name               Status       Vlan       Duplex  Speed Type 
+Gi1/0/1                      connected    530        a-full  a-100 10/100/1000BaseTX
+Gi1/0/2                      connected    530        a-full  a-100 10/100/1000BaseTX
+Gi1/0/3                      connected    530        a-full a-1000 10/100/1000BaseTX
+Gi1/0/4                      connected    909        a-full  a-100 10/100/1000BaseTX
+Gi1/0/5                      connected    909        a-full a-1000 10/100/1000BaseTX
+Gi1/0/6                      connected    909        a-full a-1000 10/100/1000BaseTX
+Gi1/0/7                      connected    909        a-full  a-100 10/100/1000BaseTX
+Gi1/0/8                      connected    909        a-full a-1000 10/100/1000BaseTX
+Gi1/0/9                      connected    909        a-full  a-100 10/100/1000BaseTX
+Gi1/0/10                     connected    909        a-full  a-100 10/100/1000BaseTX
+Gi1/0/11                     connected    909        a-full a-1000 10/100/1000BaseTX
+Gi1/0/12                     connected    909        a-full  a-100 10/100/1000BaseTX
+Gi1/0/13                     notconnect   14           auto   auto 10/100/1000BaseTX
+Gi1/0/14                     connected    14         a-full a-1000 10/100/1000BaseTX
+Gi1/0/15                     connected    712        a-full a-1000 10/100/1000BaseTX
+Gi1/0/16                     connected    trunk      a-full a-1000 10/100/1000BaseTX
+Gi1/0/17                     notconnect   trunk        auto   auto Not Present
+Gi1/0/18                     notconnect   trunk        auto   auto Not Present
+ce1000-17-4-163#show switch
+Switch/Stack Mac Address : 5856.9fe5.b700
+                                           H/W   Current
+Switch#  Role   Mac Address     Priority Version  State 
+----------------------------------------------------------
+*1       Master 5856.9fe5.b700     1      0       Ready               
+
+
+
+ce1000-17-4-163#
+ce1000-17-4-163#exit

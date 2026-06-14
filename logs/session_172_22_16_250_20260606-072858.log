@@ -1,0 +1,32 @@
+
+ae6300M-22-16-250# 
+ae6300M-22-16-250# 
+ae6300M-22-16-250# no page
+ae6300M-22-16-250# 
+ae6300M-22-16-250# show snmp system
+SNMP system information
+----------------------------
+System description : FL.10.13.1040
+System location : Wilkins Building, (Flex 4 - G04), AV Cab 5/20
+ae6300M-22-16-250# show system | inc Product
+Product Name           : S0E91A 6300M 48SR10 CL8 PoE 4p100G Sw
+ae6300M-22-16-250# show interfaces brief
+Invalid input: interfaces
+ae6300M-22-16-250# show vsf
+
+Force Autojoin             : Disabled
+Autojoin Eligibility Status: Not Eligible
+MAC Address                : 14:7e:19:ab:6d:40
+Egress Shape Rate          : None
+Secondary                  :   
+Topology                   : Standalone
+Status                     : No Split
+Split Detection Method     : None
+
+
+Mbr Mac Address         type           Status   
+ID
+--- ------------------- -------------- ---------------
+1   14:7e:19:ab:6d:40   S0E91A         Conductor
+ae6300M-22-16-250# 
+ae6300M-22-16-250# exit

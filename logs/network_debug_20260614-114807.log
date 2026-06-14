@@ -1,0 +1,44 @@
+2026-06-14 11:48:07,438 [INFO] === Script started ===
+2026-06-14 11:48:07,441 [INFO] [ENV OK] username is set
+2026-06-14 11:48:07,441 [INFO] [ENV OK] password is set
+2026-06-14 11:48:07,441 [INFO] [ENV OK] password_AD/passwordAD is set
+2026-06-14 11:48:07,442 [INFO] [ENV OK] secret is set
+2026-06-14 11:48:07,442 [INFO] [ENV OK] aruba_pw is set
+2026-06-14 11:48:07,442 [INFO] [ENV OK] aruba_secret fallback is set
+2026-06-14 11:48:07,442 [INFO] Using local Excel file: /home/dansong/scripts/inventory-local/inventory.xlsx
+2026-06-14 11:48:08,107 [INFO] [ROW 506] Starting 172.17.16.76
+2026-06-14 11:48:08,107 [INFO] [CONNECT] 172.17.16.76 (Cisco IOS)
+2026-06-14 11:48:11,195 [ERROR] [SSH FAIL] 172.17.16.76 (Cisco IOS)
+Traceback (most recent call last):
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1139, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/paramiko/client.py", line 409, in connect
+    raise NoValidConnectionsError(errors)
+paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 172.17.16.76
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "inventory.py", line 760, in get_switch_details
+    with ConnectHandler(**device) as nc:
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 401, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 490, in __init__
+    self._open()
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 495, in _open
+    self.establish_connection()
+  File "/home/dansong/scripts/inventory-local/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1161, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.17.16.76:22
+
+
+2026-06-14 11:48:11,209 [WARNING] [ROW 506] | 172.17.16.76 | SSH FAIL | reason=No data returned from switch
+2026-06-14 11:48:11,209 [INFO] [ROW 507] Starting 172.17.16.77
+2026-06-14 11:48:11,209 [INFO] [CONNECT] 172.17.16.77 (Cisco IOS)

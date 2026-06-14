@@ -1,0 +1,111 @@
+C
+       *************************************************************
+       * This is a UCL School of Pharmacy Cisco 9300-48P switch    *
+       *                                                           *
+       *  - WARNING: Authorised access ONLY! Disconnect now if     *
+       *    not authorised!                                        *
+       *                                                           *
+       *  - This system is managed by:                             *
+       *                                                           *
+       *    Network Operations Dept., Information Systems          *
+       *    Division, University College London.                   *
+       *                                                           *
+       *    Telephone Number: (020)7-6797-350                      *
+       *    Email: nwg-ops@ucl.ac.uk                               *
+       *                                                           *
+       *************************************************************
+ce9300-17-126-10>
+ce9300-17-126-10>terminal width 511
+ce9300-17-126-10>terminal length 0
+ce9300-17-126-10>
+ce9300-17-126-10>
+ce9300-17-126-10>enable
+Password: 
+ce9300-17-126-10#
+ce9300-17-126-10#
+ce9300-17-126-10#show snmp location
+School of Pharmacy, Basement, Room B14
+ce9300-17-126-10#
+ce9300-17-126-10#show inventory
+NAME: "c93xxL Stack", DESCR: "c93xxL Stack"
+PID: C9300L-48PF-4X    , VID: V02  , SN: FOC2523LJZM
+
+NAME: "Switch 1", DESCR: "C9300L-48PF-4X"
+PID: C9300L-48PF-4X    , VID: V02  , SN: FOC2523LJZM
+
+NAME: "Switch 1 - Power Supply A", DESCR: "Switch 1 - Power Supply A"
+PID: PWR-C1-1100WAC-P  , VID: V01  , SN: ART2512P5Z8
+
+NAME: "Te1/1/2", DESCR: "SFP-10GBase-SR"
+PID: SFP-10G-SR          , VID: V01  , SN: VB17230532      
+
+
+ce9300-17-126-10#
+ce9300-17-126-10#show interfaces status
+
+Port         Name               Status       Vlan       Duplex  Speed Type
+Gi1/0/1      HP Agilent b14     notconnect   140          auto   auto 10/100/1000BaseTX
+Gi1/0/2      wp97               notconnect   140          auto   auto 10/100/1000BaseTX
+Gi1/0/3                         notconnect   142          auto   auto 10/100/1000BaseTX
+Gi1/0/4      vacant             connected    200        a-full a-1000 10/100/1000BaseTX
+Gi1/0/5                         notconnect   142          auto   auto 10/100/1000BaseTX
+Gi1/0/6                         notconnect   142          auto   auto 10/100/1000BaseTX
+Gi1/0/7                         notconnect   142          auto   auto 10/100/1000BaseTX
+Gi1/0/8                         notconnect   142          auto   auto 10/100/1000BaseTX
+Gi1/0/9      wp77               connected    140        a-full a-1000 10/100/1000BaseTX
+Gi1/0/10     wp101              notconnect   140          auto   auto 10/100/1000BaseTX
+Gi1/0/11                        notconnect   142          auto   auto 10/100/1000BaseTX
+Gi1/0/12     wp103              notconnect   140          auto   auto 10/100/1000BaseTX
+Gi1/0/13     b14 wp92 93 agilen connected    140        a-full a-1000 10/100/1000BaseTX
+Gi1/0/14     b14 wp92 93 agilen notconnect   140          auto   auto 10/100/1000BaseTX
+Gi1/0/15                        notconnect   142          auto   auto 10/100/1000BaseTX
+Gi1/0/16                        notconnect   142          auto   auto 10/100/1000BaseTX
+Gi1/0/17                        notconnect   142          auto   auto 10/100/1000BaseTX
+Gi1/0/18                        notconnect   142          auto   auto 10/100/1000BaseTX
+Gi1/0/19                        notconnect   142          auto   auto 10/100/1000BaseTX
+Gi1/0/20                        notconnect   142          auto   auto 10/100/1000BaseTX
+Gi1/0/21                        notconnect   142          auto   auto 10/100/1000BaseTX
+Gi1/0/22     wp107              notconnect   142          auto   auto 10/100/1000BaseTX
+Gi1/0/23                        notconnect   142          auto   auto 10/100/1000BaseTX
+Gi1/0/24     wp108              connected    140        a-full   a-10 10/100/1000BaseTX
+Gi1/0/25                        notconnect   142          auto   auto 10/100/1000BaseTX
+Gi1/0/26     wp109              connected    140        a-full a-1000 10/100/1000BaseTX
+Gi1/0/27                        notconnect   142          auto   auto 10/100/1000BaseTX
+Gi1/0/28                        notconnect   142          auto   auto 10/100/1000BaseTX
+Gi1/0/29                        notconnect   142          auto   auto 10/100/1000BaseTX
+Gi1/0/30                        notconnect   142          auto   auto 10/100/1000BaseTX
+Gi1/0/31     wp88               connected    140        a-full a-1000 10/100/1000BaseTX
+Gi1/0/32                        notconnect   142          auto   auto 10/100/1000BaseTX
+Gi1/0/33                        notconnect   142          auto   auto 10/100/1000BaseTX
+Gi1/0/34                        notconnect   142          auto   auto 10/100/1000BaseTX
+Gi1/0/35                        notconnect   142          auto   auto 10/100/1000BaseTX
+Gi1/0/36     wp116              connected    140        a-full a-1000 10/100/1000BaseTX
+Gi1/0/37     wp114              connected    140        a-full a-1000 10/100/1000BaseTX
+Gi1/0/38                        notconnect   142          auto   auto 10/100/1000BaseTX
+Gi1/0/39     wp92               notconnect   140          auto   auto 10/100/1000BaseTX
+Gi1/0/40                        notconnect   142          auto   auto 10/100/1000BaseTX
+Gi1/0/41                        notconnect   142          auto   auto 10/100/1000BaseTX
+Gi1/0/42     wp117              connected    140        a-full a-1000 10/100/1000BaseTX
+Gi1/0/43                        notconnect   142          auto   auto 10/100/1000BaseTX
+Gi1/0/44                        notconnect   142          auto   auto 10/100/1000BaseTX
+Gi1/0/45                        notconnect   142          auto   auto 10/100/1000BaseTX
+Gi1/0/46     wp119              connected    140        a-full a-1000 10/100/1000BaseTX
+Gi1/0/47     wp96               notconnect   140          auto   auto 10/100/1000BaseTX
+Gi1/0/48                        notconnect   142          auto   auto 10/100/1000BaseTX
+Te1/1/1                         notconnect   1            auto   auto unknown
+Te1/1/2                         connected    trunk        full    10G SFP-10GBase-SR
+Te1/1/3                         notconnect   1            auto   auto unknown
+Te1/1/4                         notconnect   1            auto   auto unknown
+Ap1/0/1                         connected    1          a-full a-1000 App-hosting port
+ce9300-17-126-10#show switch
+Switch/Stack Mac Address : 28af.fd9d.9100 - Local Mac Address
+Mac persistency wait time: Indefinite
+                                             H/W   Current
+Switch#   Role    Mac Address     Priority Version  State 
+-------------------------------------------------------------------------------------
+*1       Active   28af.fd9d.9100     1      V02     Ready                
+
+
+
+ce9300-17-126-10#
+ce9300-17-126-10#exit

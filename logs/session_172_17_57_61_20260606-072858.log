@@ -1,0 +1,78 @@
+C
+       *************************************************************
+       *         This is a UCL Cisco 9300-24PC switch              *
+       *                                                           *
+       *  - WARNING: Authorised access ONLY! Disconnect now if     *
+       *    not authorised!                                        *
+       *                                                           *
+       *  - This system is managed by:                             *
+       *                                                           *
+       *    Network Infrastructure, Information Systems Division   *
+       *    University College London                              *
+       *                                                           *
+       *    Telephone Number: 020 3108 9500                        *
+       *    Email: ns-inf@ucl.ac.uk                                *
+       *                                                           *
+       *************************************************************
+ce2960s-17-57-61>
+ce2960s-17-57-61>terminal width 511
+ce2960s-17-57-61>terminal length 0
+ce2960s-17-57-61>
+ce2960s-17-57-61>
+ce2960s-17-57-61>enable
+Password: 
+ce2960s-17-57-61#
+ce2960s-17-57-61#
+ce2960s-17-57-61#show snmp location
+Clare Hall, T Block
+ce2960s-17-57-61#
+ce2960s-17-57-61#show inventory
+NAME: "1", DESCR: "WS-C2960S-24PD-L"
+PID: WS-C2960S-24PD-L  , VID: V04  , SN: FOC1727W09Y
+
+NAME: "GigabitEthernet1/0/25", DESCR: "1000BaseSX SFP"
+PID:                   , VID:      , SN: P4G0LX4         
+
+
+ce2960s-17-57-61#
+ce2960s-17-57-61#show interfaces status
+
+Port      Name               Status       Vlan       Duplex  Speed Type 
+Gi1/0/1                      connected    990        a-full a-1000 10/100/1000BaseTX
+Gi1/0/2                      connected    990        a-full a-1000 10/100/1000BaseTX
+Gi1/0/3                      connected    990        a-full a-1000 10/100/1000BaseTX
+Gi1/0/4                      connected    990        a-full a-1000 10/100/1000BaseTX
+Gi1/0/5                      notconnect   990          auto   auto 10/100/1000BaseTX
+Gi1/0/6                      notconnect   990          auto   auto 10/100/1000BaseTX
+Gi1/0/7                      notconnect   990          auto   auto 10/100/1000BaseTX
+Gi1/0/8                      notconnect   990          auto   auto 10/100/1000BaseTX
+Gi1/0/9                      notconnect   990          auto   auto 10/100/1000BaseTX
+Gi1/0/10                     notconnect   990          auto   auto 10/100/1000BaseTX
+Gi1/0/11                     notconnect   990          auto   auto 10/100/1000BaseTX
+Gi1/0/12                     notconnect   990          auto   auto 10/100/1000BaseTX
+Gi1/0/13                     notconnect   990          auto   auto 10/100/1000BaseTX
+Gi1/0/14                     notconnect   990          auto   auto 10/100/1000BaseTX
+Gi1/0/15                     notconnect   990          auto   auto 10/100/1000BaseTX
+Gi1/0/16                     notconnect   990          auto   auto 10/100/1000BaseTX
+Gi1/0/17                     notconnect   990          auto   auto 10/100/1000BaseTX
+Gi1/0/18                     notconnect   990          auto   auto 10/100/1000BaseTX
+Gi1/0/19                     notconnect   990          auto   auto 10/100/1000BaseTX
+Gi1/0/20                     notconnect   990          auto   auto 10/100/1000BaseTX
+Gi1/0/21                     notconnect   990          auto   auto 10/100/1000BaseTX
+Gi1/0/22                     notconnect   990          auto   auto 10/100/1000BaseTX
+Gi1/0/23                     notconnect   990          auto   auto 10/100/1000BaseTX
+Gi1/0/24                     notconnect   990          auto   auto 10/100/1000BaseTX
+Gi1/0/25                     connected    trunk      a-full a-1000 1000BaseSX SFP
+Te1/0/2                      notconnect   trunk        full    10G Not Present
+Fa0                          disabled     routed       auto   auto 10/100BaseTX
+ce2960s-17-57-61#show switch
+Switch/Stack Mac Address : dca5.f40d.5600
+                                           H/W   Current
+Switch#  Role   Mac Address     Priority Version  State 
+----------------------------------------------------------
+*1       Master dca5.f40d.5600     1      5       Ready               
+
+
+
+ce2960s-17-57-61#
+ce2960s-17-57-61#exit

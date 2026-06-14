@@ -1,0 +1,18 @@
+
+ae4100i-22-2-248# 
+ae4100i-22-2-248# 
+ae4100i-22-2-248# no page
+ae4100i-22-2-248# 
+ae4100i-22-2-248# show snmp system
+SNMP system information
+----------------------------
+System description : RL.10.13.1110
+System location : Ear Institute G31
+ae4100i-22-2-248# show system | inc Product
+Product Name           : JL818A 4100i 24G CL4/6 POE 4SFP+ Sw  
+ae4100i-22-2-248# show interfaces brief
+Invalid input: interfaces
+ae4100i-22-2-248# show vsf
+Invalid input: vsf
+ae4100i-22-2-248# 
+ae4100i-22-2-248# exit

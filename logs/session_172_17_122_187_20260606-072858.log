@@ -1,0 +1,114 @@
+
+       *************************************************************
+       *         This is a UCL Cisco 9300-48P switch               *
+       *                                                           *
+       *  - WARNING: Authorised access ONLY! Disconnect now if     *
+       *    not authorised!                                        *
+       *                                                           *
+       *  - This system is managed by:                             *
+       *                                                           *
+       *    Network Infrastructure, Information Systems Division   *
+       *    University College London                              *
+       *                                                           *
+       *    Telephone Number: 020 3108 9500                        *
+       *    Email: ns-inf@ucl.ac.uk                                *
+       *                                                           *
+       *************************************************************
+ce9300-17-122-187>
+ce9300-17-122-187>terminal width 511
+ce9300-17-122-187>terminal length 0
+ce9300-17-122-187>
+ce9300-17-122-187>
+ce9300-17-122-187>enable
+Password: 
+ce9300-17-122-187#
+ce9300-17-122-187#
+ce9300-17-122-187#show snmp location
+1 Wakefield Street, 3rd Floor
+ce9300-17-122-187#
+ce9300-17-122-187#show inventory
+NAME: "c93xxL Stack", DESCR: "c93xxL Stack"
+PID: C9300L-48PF-4X    , VID: V06  , SN: FOC2631Y643
+
+NAME: "Switch 1", DESCR: "C9300L-48PF-4X"
+PID: C9300L-48PF-4X    , VID: V06  , SN: FOC2631Y643
+
+NAME: "Switch 1 - Power Supply A", DESCR: "Switch 1 - Power Supply A"
+PID: PWR-C1-1100WAC-P  , VID: V01  , SN: DCC2630D1U0
+
+NAME: "Te1/1/3", DESCR: "SFP-10GBase-CX1"
+PID: SFP-H10GB-CU1M      , VID: V03  , SN: TED2226A3DD     
+
+NAME: "Te1/1/4", DESCR: "SFP-10GBase-LR"
+PID: SFP-10G-LR          , VID: V02  , SN: VE203616192     
+
+
+ce9300-17-122-187#
+ce9300-17-122-187#show interfaces status
+
+Port         Name               Status       Vlan       Duplex  Speed Type
+Gi1/0/1                         connected    52         a-full  a-100 10/100/1000BaseTX
+Gi1/0/2                         connected    52         a-full  a-100 10/100/1000BaseTX
+Gi1/0/3                         connected    52         a-full  a-100 10/100/1000BaseTX
+Gi1/0/4                         connected    52         a-full  a-100 10/100/1000BaseTX
+Gi1/0/5                         connected    52         a-full  a-100 10/100/1000BaseTX
+Gi1/0/6                         notconnect   52           auto   auto 10/100/1000BaseTX
+Gi1/0/7                         connected    52         a-full a-1000 10/100/1000BaseTX
+Gi1/0/8                         connected    52         a-full a-1000 10/100/1000BaseTX
+Gi1/0/9                         notconnect   52           auto   auto 10/100/1000BaseTX
+Gi1/0/10                        notconnect   52           auto   auto 10/100/1000BaseTX
+Gi1/0/11                        notconnect   52           auto   auto 10/100/1000BaseTX
+Gi1/0/12                        notconnect   52           auto   auto 10/100/1000BaseTX
+Gi1/0/13                        notconnect   52           auto   auto 10/100/1000BaseTX
+Gi1/0/14                        notconnect   52           auto   auto 10/100/1000BaseTX
+Gi1/0/15                        notconnect   52           auto   auto 10/100/1000BaseTX
+Gi1/0/16                        notconnect   52           auto   auto 10/100/1000BaseTX
+Gi1/0/17                        notconnect   52           auto   auto 10/100/1000BaseTX
+Gi1/0/18                        notconnect   52           auto   auto 10/100/1000BaseTX
+Gi1/0/19                        notconnect   52           auto   auto 10/100/1000BaseTX
+Gi1/0/20                        notconnect   52           auto   auto 10/100/1000BaseTX
+Gi1/0/21                        notconnect   52           auto   auto 10/100/1000BaseTX
+Gi1/0/22                        notconnect   52           auto   auto 10/100/1000BaseTX
+Gi1/0/23                        notconnect   52           auto   auto 10/100/1000BaseTX
+Gi1/0/24                        notconnect   52           auto   auto 10/100/1000BaseTX
+Gi1/0/25                        notconnect   52           auto   auto 10/100/1000BaseTX
+Gi1/0/26                        notconnect   52           auto   auto 10/100/1000BaseTX
+Gi1/0/27                        notconnect   52           auto   auto 10/100/1000BaseTX
+Gi1/0/28                        notconnect   52           auto   auto 10/100/1000BaseTX
+Gi1/0/29                        notconnect   52           auto   auto 10/100/1000BaseTX
+Gi1/0/30                        notconnect   52           auto   auto 10/100/1000BaseTX
+Gi1/0/31                        notconnect   52           auto   auto 10/100/1000BaseTX
+Gi1/0/32                        notconnect   52           auto   auto 10/100/1000BaseTX
+Gi1/0/33                        notconnect   52           auto   auto 10/100/1000BaseTX
+Gi1/0/34                        notconnect   52           auto   auto 10/100/1000BaseTX
+Gi1/0/35                        notconnect   52           auto   auto 10/100/1000BaseTX
+Gi1/0/36                        notconnect   52           auto   auto 10/100/1000BaseTX
+Gi1/0/37                        notconnect   52           auto   auto 10/100/1000BaseTX
+Gi1/0/38                        notconnect   52           auto   auto 10/100/1000BaseTX
+Gi1/0/39                        notconnect   52           auto   auto 10/100/1000BaseTX
+Gi1/0/40                        notconnect   52           auto   auto 10/100/1000BaseTX
+Gi1/0/41                        notconnect   52           auto   auto 10/100/1000BaseTX
+Gi1/0/42                        connected    52         a-full a-1000 10/100/1000BaseTX
+Gi1/0/43                        connected    52         a-full a-1000 10/100/1000BaseTX
+Gi1/0/44                        connected    52         a-full a-1000 10/100/1000BaseTX
+Gi1/0/45                        connected    52         a-full  a-100 10/100/1000BaseTX
+Gi1/0/46                        notconnect   52           auto   auto 10/100/1000BaseTX
+Gi1/0/47                        connected    52         a-full  a-100 10/100/1000BaseTX
+Gi1/0/48                        notconnect   52           auto   auto 10/100/1000BaseTX
+Te1/1/1                         notconnect   trunk        auto   auto unknown
+Te1/1/2                         notconnect   trunk        auto   auto unknown
+Te1/1/3                         connected    trunk        full    10G SFP-10GBase-CX1
+Te1/1/4                         connected    trunk        full    10G SFP-10GBase-LR
+Ap1/0/1                         connected    1          a-full a-1000 App-hosting port
+ce9300-17-122-187#show switch
+Switch/Stack Mac Address : 4488.16f7.1700 - Local Mac Address
+Mac persistency wait time: Indefinite
+                                             H/W   Current
+Switch#   Role    Mac Address     Priority Version  State 
+-------------------------------------------------------------------------------------
+*1       Active   4488.16f7.1700     1      V06     Ready                               
+
+
+
+ce9300-17-122-187#
+ce9300-17-122-187#exit

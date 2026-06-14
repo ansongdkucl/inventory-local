@@ -1,0 +1,118 @@
+
+       *************************************************************
+       *         This is a UCL Cisco 9300L-48PF-4X switch          *
+       *                                                           *
+       *  - WARNING: Authorised access ONLY! Disconnect now if     *
+       *    not authorised!                                        *
+       *                                                           *
+       *  - This system is managed by:                             *
+       *                                                           *
+       *    Network Operations Dept., Information Systems          *
+       *    Division, University College London.                   *
+       *                                                           *
+       *    Telephone Number: (020)7-6797-350                      *
+       *    Email: nwg-ops@ucl.ac.uk                               *
+       *                                                           *
+       *************************************************************
+
+ce9300-17-41-46>
+ce9300-17-41-46>terminal width 511
+ce9300-17-41-46>terminal length 0
+ce9300-17-41-46>
+ce9300-17-41-46>
+ce9300-17-41-46>enable
+Password: 
+ce9300-17-41-46#
+ce9300-17-41-46#
+ce9300-17-41-46#show snmp location
+Anatomy Building, 3rd Floor, Cab 16/13
+ce9300-17-41-46#
+ce9300-17-41-46#show inventory
+NAME: "c93xxL Stack", DESCR: "c93xxL Stack"
+PID: C9300L-48PF-4X    , VID: V06  , SN: FVH2723L23C
+
+NAME: "Switch 1", DESCR: "C9300L-48PF-4X"
+PID: C9300L-48PF-4X    , VID: V06  , SN: FVH2723L23C
+
+NAME: "Switch 1 - Power Supply A", DESCR: "Switch 1 - Power Supply A"
+PID: PWR-C1-1100WAC-P  , VID: V01  , SN: DCC2713D3UZ
+
+NAME: "Te1/1/1", DESCR: "SFP-10GBase-LR"
+PID: SFP-10G-LR          , VID: V02  , SN: FNS19071U4E     
+
+NAME: "Te1/1/2", DESCR: "SFP-10GBase-CX1"
+PID: SFP-H10GB-CU1M      , VID: V03  , SN: MOC1747A9SA     
+
+NAME: "Te1/1/4", DESCR: "SFP-10GBase-SR"
+PID: SFP-10G-T-80        , VID: V01  , SN: ZZRQ9287        
+
+
+ce9300-17-41-46#
+ce9300-17-41-46#show interfaces status
+
+Port         Name               Status       Vlan       Duplex  Speed Type
+Gi1/0/1                         notconnect   51           auto   auto 10/100/1000BaseTX
+Gi1/0/2                         connected    51         a-full a-1000 10/100/1000BaseTX
+Gi1/0/3                         notconnect   51           auto   auto 10/100/1000BaseTX
+Gi1/0/4                         notconnect   51           auto   auto 10/100/1000BaseTX
+Gi1/0/5                         notconnect   51           auto   auto 10/100/1000BaseTX
+Gi1/0/6                         connected    915        a-full  a-100 10/100/1000BaseTX
+Gi1/0/7                         connected    51         a-full  a-100 10/100/1000BaseTX
+Gi1/0/8                         connected    915        a-full a-1000 10/100/1000BaseTX
+Gi1/0/9                         connected    990        a-full a-1000 10/100/1000BaseTX
+Gi1/0/10                        connected    915        a-full a-1000 10/100/1000BaseTX
+Gi1/0/11                        connected    990        a-full a-1000 10/100/1000BaseTX
+Gi1/0/12                        notconnect   51           auto   auto 10/100/1000BaseTX
+Gi1/0/13                        notconnect   51           auto   auto 10/100/1000BaseTX
+Gi1/0/14                        notconnect   51           auto   auto 10/100/1000BaseTX
+Gi1/0/15                        connected    990        a-full a-1000 10/100/1000BaseTX
+Gi1/0/16                        notconnect   51           auto   auto 10/100/1000BaseTX
+Gi1/0/17     16/13/728          notconnect   51           auto   auto 10/100/1000BaseTX
+Gi1/0/18     16/13/727          notconnect   51           auto   auto 10/100/1000BaseTX
+Gi1/0/19     16/13/730          connected    51         a-full   a-10 10/100/1000BaseTX
+Gi1/0/20     16/13/729          connected    51         a-full   a-10 10/100/1000BaseTX
+Gi1/0/21                        connected    990        a-full a-1000 10/100/1000BaseTX
+Gi1/0/22                        notconnect   51           auto   auto 10/100/1000BaseTX
+Gi1/0/23     rogue_dhcp         disabled     51           auto   auto 10/100/1000BaseTX
+Gi1/0/24                        notconnect   51           auto   auto 10/100/1000BaseTX
+Gi1/0/25                        connected    51         a-full a-1000 10/100/1000BaseTX
+Gi1/0/26                        notconnect   51           auto   auto 10/100/1000BaseTX
+Gi1/0/27                        notconnect   51           auto   auto 10/100/1000BaseTX
+Gi1/0/28                        notconnect   51           auto   auto 10/100/1000BaseTX
+Gi1/0/29                        connected    990        a-full a-1000 10/100/1000BaseTX
+Gi1/0/30                        connected    51         a-full a-1000 10/100/1000BaseTX
+Gi1/0/31                        notconnect   51           auto   auto 10/100/1000BaseTX
+Gi1/0/32                        notconnect   51           auto   auto 10/100/1000BaseTX
+Gi1/0/33                        connected    990        a-full a-1000 10/100/1000BaseTX
+Gi1/0/34     16/13/761 EMON     connected    514        a-full  a-100 10/100/1000BaseTX
+Gi1/0/35                        notconnect   51           auto   auto 10/100/1000BaseTX
+Gi1/0/36                        notconnect   51           auto   auto 10/100/1000BaseTX
+Gi1/0/37                        notconnect   51           auto   auto 10/100/1000BaseTX
+Gi1/0/38                        notconnect   51           auto   auto 10/100/1000BaseTX
+Gi1/0/39     16/13/763          notconnect   915          auto   auto 10/100/1000BaseTX
+Gi1/0/40                        notconnect   51           auto   auto 10/100/1000BaseTX
+Gi1/0/41                        notconnect   51           auto   auto 10/100/1000BaseTX
+Gi1/0/42                        connected    915        a-full a-1000 10/100/1000BaseTX
+Gi1/0/43     16/13/764 Wi-Fi    notconnect   990          auto   auto 10/100/1000BaseTX
+Gi1/0/44                        connected    51         a-full a-1000 10/100/1000BaseTX
+Gi1/0/45                        connected    990        a-full a-1000 10/100/1000BaseTX
+Gi1/0/46                        connected    915        a-full  a-100 10/100/1000BaseTX
+Gi1/0/47                        notconnect   51           auto   auto 10/100/1000BaseTX
+Gi1/0/48                        notconnect   915          auto   auto 10/100/1000BaseTX
+Te1/1/1                         connected    trunk        full    10G SFP-10GBase-LR
+Te1/1/2                         connected    trunk        full    10G SFP-10GBase-CX1
+Te1/1/3                         notconnect   trunk        auto   auto unknown
+Te1/1/4                         connected    trunk        full    10G SFP-10GBase-SR
+Ap1/0/1                         connected    1          a-full a-1000 App-hosting port
+ce9300-17-41-46#show switch
+Switch/Stack Mac Address : 9088.55f6.4b00 - Local Mac Address
+Mac persistency wait time: Indefinite
+                                             H/W   Current
+Switch#   Role    Mac Address     Priority Version  State 
+-------------------------------------------------------------------------------------
+*1       Active   9088.55f6.4b00     1      V06     Ready                               
+
+
+
+ce9300-17-41-46#
+ce9300-17-41-46#exit

@@ -1,0 +1,105 @@
+
+       *************************************************************
+       *         This is a UCL Cisco 9300L-48PF-4X switch          *
+       *                                                           *
+       *  - WARNING: Authorised access ONLY! Disconnect now if     *
+       *    not authorised!                                        *
+       *                                                           *
+       *  - This system is managed by:                             *
+       *                                                           *
+       *    Network Operations Dept., Information Systems          *
+       *    Division, University College London.                   *
+       *                                                           *
+       *    Telephone Number: (020)7-6797-350                      *
+       *    Email: nwg-ops@ucl.ac.uk                               *
+       *                                                           *
+       *************************************************************
+ce9300-17-41-48>
+ce9300-17-41-48>terminal width 511
+ce9300-17-41-48>terminal length 0
+ce9300-17-41-48>
+ce9300-17-41-48>
+ce9300-17-41-48>enable
+Password: 
+ce9300-17-41-48#
+ce9300-17-41-48#
+ce9300-17-41-48#show snmp location
+Anatomy Building, 3rd Floor, Cab 16/13
+ce9300-17-41-48#
+ce9300-17-41-48#show inventory
+NAME: "c93xx Stack", DESCR: "c93xx Stack"
+PID: C9300X-48HX       , VID: V02  , SN: FOC2701Y7ZG
+
+NAME: "Switch 1", DESCR: "C9300X-48HX"
+PID: C9300X-48HX       , VID: V02  , SN: FOC2701Y7ZG
+
+NAME: "Switch 1 - Power Supply A", DESCR: "Switch 1 - Power Supply A"
+PID: PWR-C1-1100WAC-P  , VID: V01  , SN: DCC2645DA1Z
+
+
+ce9300-17-41-48#
+ce9300-17-41-48#show interfaces status
+
+Port         Name               Status       Vlan       Duplex  Speed Type
+Te1/0/1                         notconnect   51           auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/2                         notconnect   51           auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/3                         notconnect   51           auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/4                         notconnect   51           auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/5                         notconnect   51           auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/6                         notconnect   51           auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/7                         notconnect   51           auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/8                         notconnect   51           auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/9                         notconnect   51           auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/10                        notconnect   51           auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/11                        notconnect   51           auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/12                        notconnect   51           auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/13                        connected    51         a-full  a-10G 100/1000/2.5G/5G/10GBaseTX
+Te1/0/14                        notconnect   51           auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/15                        notconnect   51           auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/16                        connected    51         a-full  a-100 100/1000/2.5G/5G/10GBaseTX
+Te1/0/17                        notconnect   51           auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/18                        notconnect   51           auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/19                        notconnect   51           auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/20                        connected    51         a-full a-1000 100/1000/2.5G/5G/10GBaseTX
+Te1/0/21                        connected    51         a-full a-2500 100/1000/2.5G/5G/10GBaseTX
+Te1/0/22                        notconnect   51           auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/23                        notconnect   51           auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/24                        notconnect   51           auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/25                        notconnect   51           auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/26                        notconnect   51           auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/27                        notconnect   51           auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/28                        notconnect   51           auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/29                        notconnect   51           auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/30                        notconnect   51           auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/31                        notconnect   51           auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/32                        notconnect   51           auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/33                        notconnect   51           auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/34                        notconnect   51           auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/35                        notconnect   51           auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/36                        notconnect   51           auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/37                        notconnect   51           auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/38                        connected    51         a-full a-1000 100/1000/2.5G/5G/10GBaseTX
+Te1/0/39                        notconnect   51           auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/40                        notconnect   51           auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/41                        notconnect   51           auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/42                        notconnect   51           auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/43                        notconnect   51           auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/44                        notconnect   51           auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/45                        notconnect   51           auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/46                        notconnect   51           auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/47                        notconnect   51           auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/48                        connected    trunk      a-full  a-10G 100/1000/2.5G/5G/10GBaseTX
+Ap1/0/1                         connected    1          a-full  a-10G App-hosting port
+Ap1/0/2                         connected    1          a-full  a-10G App-hosting port
+ce9300-17-41-48#show switch
+Switch/Stack Mac Address : 4c42.1e4b.5880 - Local Mac Address
+Mac persistency wait time: Indefinite
+                                             H/W   Current
+Switch#   Role    Mac Address     Priority Version  State 
+-------------------------------------------------------------------------------------
+*1       Active   4c42.1e4b.5880     1      V02     Ready                               
+
+
+
+ce9300-17-41-48#
+ce9300-17-41-48#exit

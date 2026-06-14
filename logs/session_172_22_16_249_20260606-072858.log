@@ -1,0 +1,21 @@
+
+
+Last login: 2026-05-10 10:32:50 from 128.40.19.111
+User "cceadan" has logged in 1 time in the past 30 days
+ae4100i-22-16-249# 
+ae4100i-22-16-249# 
+ae4100i-22-16-249# no page
+ae4100i-22-16-249# 
+ae4100i-22-16-249# show snmp system
+SNMP system information
+----------------------------
+System description : RL.10.10.1070
+System location : Wilkins Building, (Flex 4 - G04), AV Cab 5/20
+ae4100i-22-16-249# show system | inc Product
+Product Name       : JL818A 4100i 24G CL4/6 POE 4SFP+ Sw  
+ae4100i-22-16-249# show interfaces brief
+Invalid input: interfaces
+ae4100i-22-16-249# show vsf
+Invalid input: vsf
+ae4100i-22-16-249# 
+ae4100i-22-16-249# exit

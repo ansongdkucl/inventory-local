@@ -1,0 +1,36 @@
+
+ae6300M-22-22-7# 
+ae6300M-22-22-7# 
+ae6300M-22-22-7# no page
+ae6300M-22-22-7# 
+ae6300M-22-22-7# show snmp system
+SNMP system information
+----------------------------
+System description : FL.10.13.1040
+System location : Maple House, 3rd Floor - Wing 3B, Cab 387/9
+ae6300M-22-22-7# show system | inc Product
+Product Name           : S0E91A 6300M 48SR10 CL8 PoE 4p100G Sw
+ae6300M-22-22-7# show interfaces brief
+Invalid input: interfaces
+ae6300M-22-22-7# show vsf
+
+Force Autojoin             : Disabled
+Autojoin Eligibility Status: Not Eligible
+MAC Address                : e8:1c:a5:cb:34:00
+Egress Shape Rate          : None
+Secondary                  : 2
+Topology                   : Ring
+Status                     : No Split
+Split Detection Method     : None
+
+
+Mbr Mac Address         type           Status   
+ID
+--- ------------------- -------------- ---------------
+1   e8:1c:a5:cb:34:00   S0E91A         Conductor
+2   00:c8:4e:1d:73:40   S0E91A         Standby
+3   00:c8:4e:1d:15:c0   S0E91A         Member
+4   00:c8:4e:1d:15:80   S0E91A         Member
+5   00:c8:4e:1d:53:80   S0E91A         Member
+ae6300M-22-22-7# 
+ae6300M-22-22-7# exit

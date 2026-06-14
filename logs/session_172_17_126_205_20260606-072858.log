@@ -1,0 +1,110 @@
+
+       *************************************************************
+       *         This is a UCL Cisco 3650-48P switch              *
+       *                                                           *
+       *  - WARNING: Authorised access ONLY! Disconnect now if     *
+       *    not authorised!                                        *
+       *                                                           *
+       *  - This system is managed by:                             *
+       *                                                           *
+       *    Network Operations Dept., Information Systems          *
+       *    Division, University College London.                   *
+       *                                                           *
+       *    Telephone Number: (020)7-6797-350                      *
+       *    Email: nwg-ops@ucl.ac.uk                               *
+       *                                                           *
+       *************************************************************
+ce3650-17-126-205>
+ce3650-17-126-205>terminal width 511
+ce3650-17-126-205>terminal length 0
+ce3650-17-126-205>
+ce3650-17-126-205>
+ce3650-17-126-205>enable
+Password: 
+ce3650-17-126-205#
+ce3650-17-126-205#
+ce3650-17-126-205#show snmp location
+School of Pharmacy, 1st Floor
+ce3650-17-126-205#
+ce3650-17-126-205#show inventory
+NAME: "c36xx Stack", DESCR: "c36xx Stack"
+PID: WS-C3650-48PQ     , VID: V05  , SN: FDO2121Q1NU
+
+NAME: "Switch 1", DESCR: "WS-C3650-48FQ-L"
+PID: WS-C3650-48FQ-L   , VID: V05  , SN: FDO2121Q1NU
+
+NAME: "Switch 1 - Power Supply A", DESCR: "Switch 1 - Power Supply A"
+PID: PWR-C2-1025WAC    , VID: V02  , SN: LIT21073M3R
+
+NAME: "TenGigabitEthernet1/1/1", DESCR: "SFP-10GBase-CX1"
+PID: SFP-H10GB-CU1M     , VID: V03  , SN: LRM2114426U    
+
+
+ce3650-17-126-205#
+ce3650-17-126-205#show interfaces status
+
+Port      Name               Status       Vlan       Duplex  Speed Type 
+Gi1/0/1   PDU-131003A.dcs-is connected    770        a-full  a-100 10/100/1000BaseTX
+Gi1/0/2   PDU-131003B.dcs-is connected    770        a-full  a-100 10/100/1000BaseTX
+Gi1/0/3   UPS-131003A.dcs-is connected    770        a-full  a-100 10/100/1000BaseTX
+Gi1/0/4   UPS-131003B.dcs-is connected    770        a-full  a-100 10/100/1000BaseTX
+Gi1/0/5                      notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/6                      notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/7                      notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/8                      notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/9                      notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/10                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/11                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/12                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/13                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/14                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/15                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/16                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/17                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/18                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/19                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/20                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/21                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/22                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/23                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/24                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/25                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/26                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/27                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/28                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/29                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/30                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/31                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/32                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/33                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/34                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/35                     notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/36  VIEW1              notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/37  VIEW1              notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/38  ESX2               notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/39  ESX2               notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/40  ESX1               notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/41  ESX1               notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/42  FinSQL Server      notconnect   160          auto   auto 10/100/1000BaseTX
+Gi1/0/43  FinIIS Server      notconnect   180          auto   auto 10/100/1000BaseTX
+Gi1/0/44  VIEW2              notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/45  VIEW2              notconnect   1            auto   auto 10/100/1000BaseTX
+Gi1/0/46  BE-es1             connected    trunk      a-full a-1000 10/100/1000BaseTX
+Gi1/0/47  BE-es2             connected    trunk      a-full a-1000 10/100/1000BaseTX
+Gi1/0/48  BMA-M-ES1          connected    trunk        full    100 10/100/1000BaseTX
+Te1/1/1                      connected    trunk        full    10G SFP-10GBase-CX1
+Te1/1/2                      notconnect   trunk        auto   auto unknown
+Te1/1/3   cisco-sop          notconnect   trunk        auto   auto unknown
+Te1/1/4                      notconnect   trunk        auto   auto unknown
+ce3650-17-126-205#show switch
+Switch/Stack Mac Address : 40ce.24cc.7580 - Local Mac Address
+Mac persistency wait time: Indefinite
+                                             H/W   Current
+Switch#   Role    Mac Address     Priority Version  State 
+------------------------------------------------------------
+*1       Active   40ce.24cc.7580     1      V05     Ready               
+
+
+
+ce3650-17-126-205#
+ce3650-17-126-205#exit

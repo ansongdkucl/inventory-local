@@ -1,0 +1,107 @@
+
+
+       *************************************************************
+       *            This is a UCL Cisco 2960 PoE switch            *
+       *                                                           *
+       *  - WARNING: Authorised access ONLY! Disconnect now if     *
+       *    not authorised!                                        *
+       *                                                           *
+       *  - This system is managed by:                             *
+       *                                                           *
+       *    Network Operations Dept., Information Systems          *
+       *    Division, University College London.                   *
+       *                                                           *
+       *    Telephone Number: (020)7-6797-350                      *
+       *    Email: nwg-ops@ucl.ac.uk                               *
+       *                                                           *
+       *************************************************************
+ce2960x-17-92-7>
+ce2960x-17-92-7>terminal width 511
+ce2960x-17-92-7>terminal length 0
+ce2960x-17-92-7>
+ce2960x-17-92-7>
+ce2960x-17-92-7>enable
+Password: 
+ce2960x-17-92-7#
+ce2960x-17-92-7#
+ce2960x-17-92-7#show snmp location
+TP3 86/2412
+ce2960x-17-92-7#
+ce2960x-17-92-7#show inventory
+NAME: "1", DESCR: "WS-C2960X-48FPD-L"
+PID: WS-C2960X-48FPD-L , VID: V01  , SN: FOC1813S4DE
+
+NAME: "TenGigabitEthernet1/0/1", DESCR: "SFP-10GBase-SR"
+PID: SFP-10G-SR-S        , VID: V01  , SN: AVD2102D1XP     
+
+NAME: "TenGigabitEthernet1/0/2", DESCR: "SFP-10GBase-SR"
+PID: SFP-10G-SR-S        , VID: V01  , SN: AVD2102D1VN     
+
+
+ce2960x-17-92-7#
+ce2960x-17-92-7#show interfaces status
+
+Port      Name               Status       Vlan       Duplex  Speed Type 
+Gi1/0/1                      connected    8          a-full a-1000 10/100/1000BaseTX
+Gi1/0/2                      connected    8          a-full a-1000 10/100/1000BaseTX
+Gi1/0/3                      connected    8          a-full a-1000 10/100/1000BaseTX
+Gi1/0/4                      connected    8          a-full a-1000 10/100/1000BaseTX
+Gi1/0/5                      connected    8          a-full a-1000 10/100/1000BaseTX
+Gi1/0/6                      connected    8          a-full a-1000 10/100/1000BaseTX
+Gi1/0/7                      connected    8          a-full a-1000 10/100/1000BaseTX
+Gi1/0/8                      connected    8          a-full a-1000 10/100/1000BaseTX
+Gi1/0/9                      connected    8          a-full a-1000 10/100/1000BaseTX
+Gi1/0/10                     connected    8          a-full a-1000 10/100/1000BaseTX
+Gi1/0/11                     connected    8          a-full a-1000 10/100/1000BaseTX
+Gi1/0/12                     connected    8          a-full a-1000 10/100/1000BaseTX
+Gi1/0/13                     connected    8          a-full a-1000 10/100/1000BaseTX
+Gi1/0/14                     connected    8          a-full a-1000 10/100/1000BaseTX
+Gi1/0/15                     connected    8          a-full a-1000 10/100/1000BaseTX
+Gi1/0/16                     connected    8          a-full a-1000 10/100/1000BaseTX
+Gi1/0/17                     notconnect   8            auto   auto 10/100/1000BaseTX
+Gi1/0/18                     notconnect   8            auto   auto 10/100/1000BaseTX
+Gi1/0/19                     notconnect   8            auto   auto 10/100/1000BaseTX
+Gi1/0/20                     notconnect   8            auto   auto 10/100/1000BaseTX
+Gi1/0/21                     notconnect   8            auto   auto 10/100/1000BaseTX
+Gi1/0/22                     notconnect   8            auto   auto 10/100/1000BaseTX
+Gi1/0/23                     notconnect   8            auto   auto 10/100/1000BaseTX
+Gi1/0/24                     notconnect   8            auto   auto 10/100/1000BaseTX
+Gi1/0/25                     notconnect   8            auto   auto 10/100/1000BaseTX
+Gi1/0/26                     notconnect   8            auto   auto 10/100/1000BaseTX
+Gi1/0/27                     notconnect   8            auto   auto 10/100/1000BaseTX
+Gi1/0/28                     notconnect   8            auto   auto 10/100/1000BaseTX
+Gi1/0/29                     notconnect   8            auto   auto 10/100/1000BaseTX
+Gi1/0/30                     notconnect   8            auto   auto 10/100/1000BaseTX
+Gi1/0/31                     notconnect   8            auto   auto 10/100/1000BaseTX
+Gi1/0/32                     notconnect   8            auto   auto 10/100/1000BaseTX
+Gi1/0/33                     notconnect   8            auto   auto 10/100/1000BaseTX
+Gi1/0/34                     notconnect   8            auto   auto 10/100/1000BaseTX
+Gi1/0/35                     notconnect   8            auto   auto 10/100/1000BaseTX
+Gi1/0/36                     notconnect   8            auto   auto 10/100/1000BaseTX
+Gi1/0/37                     notconnect   8            auto   auto 10/100/1000BaseTX
+Gi1/0/38                     notconnect   8            auto   auto 10/100/1000BaseTX
+Gi1/0/39                     notconnect   8            auto   auto 10/100/1000BaseTX
+Gi1/0/40                     notconnect   8            auto   auto 10/100/1000BaseTX
+Gi1/0/41                     notconnect   8            auto   auto 10/100/1000BaseTX
+Gi1/0/42                     notconnect   8            auto   auto 10/100/1000BaseTX
+Gi1/0/43                     notconnect   8            auto   auto 10/100/1000BaseTX
+Gi1/0/44                     notconnect   8            auto   auto 10/100/1000BaseTX
+Gi1/0/45                     notconnect   8            auto   auto 10/100/1000BaseTX
+Gi1/0/46                     notconnect   8            auto   auto 10/100/1000BaseTX
+Gi1/0/47                     notconnect   8            auto   auto 10/100/1000BaseTX
+Gi1/0/48                     notconnect   8            auto   auto 10/100/1000BaseTX
+Te1/0/1   nx93180-17-92-5 ** connected    trunk        full    10G SFP-10GBase-SR
+Te1/0/2   nx93180-17-92-6 ** connected    trunk        full    10G SFP-10GBase-SR
+Po24      nx93180-17-92-5/6  connected    trunk      a-full    10G 
+Fa0                          notconnect   routed       auto   auto 10/100BaseTX
+ce2960x-17-92-7#show switch
+Switch/Stack Mac Address : 00e1.6d7b.4980
+                                           H/W   Current
+Switch#  Role   Mac Address     Priority Version  State 
+----------------------------------------------------------
+*1       Master 00e1.6d7b.4980     1      4       Ready               
+
+
+
+ce2960x-17-92-7#
+ce2960x-17-92-7#exit

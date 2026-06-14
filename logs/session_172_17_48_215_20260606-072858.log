@@ -1,0 +1,59 @@
+C
+       *************************************************************
+       *         This is a UCL Cisco 3560CX-12PC switch            *
+       *                                                           *
+       *  - WARNING: Authorised access ONLY! Disconnect now if     *
+       *    not authorised!                                        *
+       *                                                           *
+       *  - This system is managed by:                             *
+       *                                                           *
+       *    Network Infrastructure, Information Systems Division   *
+       *    University College London                              *
+       *                                                           *
+       *    Telephone Number: 020 3108 9500                        *
+       *    Email: ns-inf@ucl.ac.uk                                *
+       *                                                           *
+       *************************************************************
+ce3560cx-17-48-215>
+ce3560cx-17-48-215>terminal width 511
+ce3560cx-17-48-215>terminal length 0
+ce3560cx-17-48-215>
+ce3560cx-17-48-215>
+ce3560cx-17-48-215>enable
+Password: 
+ce3560cx-17-48-215#
+ce3560cx-17-48-215#
+ce3560cx-17-48-215#show snmp location
+Chenies Mews, Stephen Ellis Desk
+ce3560cx-17-48-215#
+ce3560cx-17-48-215#show inventory
+NAME: "1", DESCR: "WS-C3560CX-12PC-S"
+PID: WS-C3560CX-12PC-S , VID: V03  , SN: FOC2124Z53P
+
+
+ce3560cx-17-48-215#
+ce3560cx-17-48-215#show interfaces status
+
+Port      Name               Status       Vlan       Duplex  Speed Type 
+Gi0/1                        connected    39         a-full a-1000 10/100/1000BaseTX
+Gi0/2                        notconnect   39           auto   auto 10/100/1000BaseTX
+Gi0/3                        notconnect   530          auto   auto 10/100/1000BaseTX
+Gi0/4                        notconnect   530          auto   auto 10/100/1000BaseTX
+Gi0/5     MobileConnect Stat notconnect   1910         auto   auto 10/100/1000BaseTX
+Gi0/6                        notconnect   909          auto   auto 10/100/1000BaseTX
+Gi0/7     MobileConnect Stat notconnect   1910         auto   auto 10/100/1000BaseTX
+Gi0/8                        notconnect   909          auto   auto 10/100/1000BaseTX
+Gi0/9                        notconnect   909          auto   auto 10/100/1000BaseTX
+Gi0/10                       notconnect   909          auto   auto 10/100/1000BaseTX
+Gi0/11                       notconnect   909          auto   auto 10/100/1000BaseTX
+Gi0/12                       notconnect   909          auto   auto 10/100/1000BaseTX
+Gi0/13                       connected    trunk      a-full a-1000 10/100/1000BaseTX
+Gi0/14                       notconnect   trunk        auto   auto 10/100/1000BaseTX
+Gi0/15                       notconnect   trunk        auto   auto Not Present
+Gi0/16                       notconnect   trunk        auto   auto Not Present
+ce3560cx-17-48-215#show switch
+                         ^
+% Invalid input detected at '^' marker.
+
+ce3560cx-17-48-215#
+ce3560cx-17-48-215#exit
