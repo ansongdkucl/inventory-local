@@ -17164,7 +17164,9 @@ ce3650-17-76-48:
   platform: cisco-ios
   groups:
   - switches
-  data: {}
+  data:
+    building: '281'
+    cab: '20'
 ce3650-17-78-3:
   hostname: 172.17.78.3
   port: 22
