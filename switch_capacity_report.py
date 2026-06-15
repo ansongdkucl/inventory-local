@@ -472,7 +472,14 @@ def collect_switch_capacity(task, requested_age, include_admin_down, include_tru
     except Exception:
         snmp_location = str(host.data.get("snmp_location", "")).strip()
 
-    effective_age = min(requested_age, uptime) if requested_age and uptime else requested_age
+    effective_age = requested_age
+
+    if requested_age and uptime and uptime < requested_age:
+        warnings.append(
+            f"{hostname}: switch uptime ({fmt_age(uptime)}) is shorter than "
+            f"requested unused period ({fmt_age(requested_age)}); only ports "
+            "with explicit last-used evidence older than the requested period are included."
+        )
 
     try:
         status_output = run_show(task, status_cmd(platform))
@@ -513,9 +520,6 @@ def collect_switch_capacity(task, requested_age, include_admin_down, include_tru
 
         if port_age is None:
             port_age = uptime
-
-        if port_age and uptime:
-            port_age = min(port_age, uptime)
 
         if requested_age:
             if effective_age is None or port_age is None:
